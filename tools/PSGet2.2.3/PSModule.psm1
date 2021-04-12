@@ -10700,6 +10700,7 @@ function Publish-InternalModule {
 
             if (Microsoft.PowerShell.Management\Test-Path -Path $manifestPath -PathType Leaf) {
                 $ev = $null
+                $PSVersionTable | Out-String
                 $module = Microsoft.PowerShell.Core\Test-ModuleManifest -Path $manifestPath `
                     -ErrorVariable ev `
                     -Verbose:$VerbosePreference
